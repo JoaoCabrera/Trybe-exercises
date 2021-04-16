@@ -58,6 +58,7 @@
   <body>
     <script>
       //Parte 1
+
       //Exercicio 1
       let bodyTags = document.querySelector('body');
       let createH1 = document.createElement('h1');
@@ -96,6 +97,7 @@
 
         let listItem = document.createElement('li');
         listItem.innerText = li;
+        listItem.className = 'list-item'
 
         uList.appendChild(listItem);
       }
@@ -103,9 +105,39 @@
       let h3a = document.createElement('h3');
       let h3b = document.createElement('h3');
       let h3c = document.createElement('h3');
+      let recupDiv1 = document.querySelector('.main-content')
       div1.appendChild(h3a);
       div1.appendChild(h3b);
       div1.appendChild(h3c);
+
+      //Parte 2
+
+      //Exercicio 1
+      createH1.className = 'title';
+      //Exercicio 2
+      h3a.className = 'description';
+      h3b.className = 'description';
+      h3c.className = 'description';
+      //Exercicio 3
+      div1.removeChild(div3);
+      //Exercicio 4
+      div4.style.marginRight = 'auto';
+      //Exercicio 5
+      div1.style.backgroundColor = 'green'
+     //Exercicio 6
+     let numberList = document.querySelectorAll('.list-item');
+     console.log(numberList);
+
+     for(let index = 0; index < numberList.length; index += 1) {
+       let element = numberList[index];
+
+       if (element.innerText.includes(9)) {
+         uList.removeChild(element);
+       }
+       if (element.innerText.includes(10)) {
+         uList.removeChild(element);
+       }
+     }
     </script>
   </body>
 </html>
