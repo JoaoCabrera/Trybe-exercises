@@ -67,3 +67,55 @@ buttonHoliday.addEventListener('click', function() {
     }
   }
 });
+
+//Exercicio 4
+function fridayBtn (string) {
+  let btn = document.createElement('Button');
+  let lbl = document.createTextNode(string);
+  btn.appendChild(lbl);
+
+  btn.id = 'btn-friday';
+  buttonsContainer.appendChild(btn);
+}
+fridayBtn('Sexta-feira');
+
+//Exercicio 5
+let buttonfriday = document.querySelector('#btn-friday');
+buttonfriday.addEventListener('click', function() {
+  let fridays = document.querySelectorAll('.friday');
+  for (let day of fridays) {
+    if (day.innerText !== 'Sexta-feira'){
+      day.innerText = 'Sexta-feira';
+    } else {
+      fridays[0].innerText = '4';
+      fridays[1].innerText = '11';
+      fridays[2].innerText = '18';
+      fridays[3].innerText = '25';
+    }
+  }
+});
+
+//Exercicio 6
+recupDays.addEventListener('mouseover', function zoom (event) {
+  let = daysZoom = document.querySelectorAll('.day');
+  for (let i = 0; i < daysZoom.length; i += 1) {
+    event.target.style.fontSize = '25px';
+  }
+});
+
+recupDays.addEventListener('mouseleave', function zoom (event) {
+  let = daysZoom = document.querySelectorAll('.day');
+  for (let i = 0; i < daysZoom.length; i += 1) {
+    daysZoom[i].style.fontSize = '20px';
+  }
+});
+
+//Exercicio 7
+let recupTasks = document.querySelector('.my-tasks')
+function addTask (task) {
+  let itemTask = document.createElement('span');
+  itemTask.innerText = task;
+  
+  recupTasks.appendChild(itemTask);
+}
+addTask('cozinhar');
