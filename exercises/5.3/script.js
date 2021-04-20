@@ -97,14 +97,14 @@ buttonfriday.addEventListener('click', function() {
 
 //Exercicio 6
 recupDays.addEventListener('mouseover', function zoom (event) {
-  let = daysZoom = document.querySelectorAll('.day');
+  let daysZoom = document.querySelectorAll('.day');
   for (let i = 0; i < daysZoom.length; i += 1) {
     event.target.style.fontSize = '25px';
   }
 });
 
 recupDays.addEventListener('mouseleave', function zoom (event) {
-  let = daysZoom = document.querySelectorAll('.day');
+  let daysZoom = document.querySelectorAll('.day');
   for (let i = 0; i < daysZoom.length; i += 1) {
     daysZoom[i].style.fontSize = '20px';
   }
@@ -119,3 +119,35 @@ function addTask (task) {
   recupTasks.appendChild(itemTask);
 }
 addTask('cozinhar');
+
+//Exercicio 8
+function taskColor (color) {
+  let itemTaskColor = document.createElement('div');
+  itemTaskColor.style.backgroundColor = color;
+  itemTaskColor.classList = 'task';
+
+  recupTasks.appendChild(itemTaskColor);
+}
+taskColor('lightgreen');
+
+//Exercicio 9
+let recupItemColor = document.querySelector('.task');
+recupTasks.addEventListener('click', function addColor () {
+  if (recupItemColor.className !== 'task') {
+    recupItemColor.className = 'task'
+  } else {
+    recupItemColor.className = 'task selected'
+  }
+});
+
+//Exercicio 10
+recupDays.addEventListener('click', function(event) {
+  let dayChangeColor = document.querySelectorAll('.day');
+  for (let i = 0; i < dayChangeColor.length; i += 1) {
+    if (recupItemColor.className !== 'task') {
+      event.target.style.backgroundColor = recupItemColor.style.backgroundColor;
+    } else {
+      event.target.style.backgroundColor = '#eee';
+    }
+  }
+});
