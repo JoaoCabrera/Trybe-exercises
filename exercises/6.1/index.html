@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculo</title>
+</head>
+<body>
+  <h1>Formulário Curriculo</h1>
+  <form action="" method="GET">
+    <!-- Exercicio 1 -->
+    <fieldset id="fieldset-1">
+      <label for="input-name">Nome</label>
+      <input type="text" name="name" id="input-name" required maxlength="40" placeholder="Digite seu nome">
+      <br>
+      <br>
+      <label for="input-email">E-mail</label>
+      <input type="email" name="e-mail" id="input-email" required maxlength="50" placeholder="Digite seu e-mail">
+      <br>
+      <br>
+      <label for="input-cpf">CPF</label>
+      <input type="text" name="cpf" id="input-cpf" required maxlength="11" placeholder="Digite seu CPF">
+      <br>
+      <br>
+      <label for="input-adress">Endereço</label>
+      <input type="text" name="adress" id="input-adress" required maxlength="200" placeholder="Digite seu endereço">
+      <br>
+      <br>
+      <label for="input-city">Cidade</label>
+      <input type="text" name="city" id="input-city" required maxlength="28" placeholder="Digite sua cidade">
+      <br>
+      <br>
+      <label for="input-state">Estado</label>
+      <select name="state" id="input-state" required></select>
+      <br>
+      <br>
+      <label for="type1">
+      <input type="radio" name="type-house" id="type1">Casa
+      </label>
+      <label for="type2">
+      <input type="radio" name="type-house" id="type2">Apartamento
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <!-- Exercicio 2 -->
+    <fieldset>
+      <label for="resume">Resumo do currículo</label>
+      <br>
+      <textarea name="resume" id="resume" cols="30" rows="10" maxlength="1000"></textarea>
+      <br>
+      <br>
+      <label for="office"></label>Cargo
+      <input type="text" name="office" id="office" required maxlength="40">
+      <br>
+      <br>
+      <label for="office-description"></label>Descrição do cargo
+      <br>
+      <textarea name="description" id="office-description" cols="30" rows="10" required maxlength="500"></textarea>
+      <br>
+      <br>
+      <label for="initial-date"></label>Data de inicio
+      <input type="date" name="intial-date" id="initial-date" required>
+    </fieldset>
+    <br>
+    <button type="reset">Limpar</button>
+    <button type="submit" id="submit">Enviar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
