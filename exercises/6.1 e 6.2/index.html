@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculo</title>
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+</head>
+<body>
+  <h1 class="title has-text-centered">Formulário Curriculo</h1>
+  <form action="" method="GET">
+    
+    <fieldset id="fieldset-1">
+
+      <!-- Nome -->
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="40" placeholder="Digite seu nome">
+        </div>
+      </div>
+      
+      <!-- Email -->
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="email" maxlength="50" placeholder="Digite seu e-mail">
+        </div>
+      </div>
+
+      <!-- CPF -->
+      <div class="field">
+        <label class="label">CPF</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="11" placeholder="Digite seu CPF">
+        </div>
+      </div>
+      
+      <!-- Endereço -->
+      <div class="field">
+        <label class="label">Endereço</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="200" placeholder="Digite seu endereço">
+        </div>
+      </div>
+      
+      <!-- Cidade -->
+      <div class="field">
+        <label class="label">Cidade</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="28" placeholder="Digite sua cidade">
+        </div>
+      </div>
+      
+      <!-- Estado -->
+      <div class="control">
+        <div class="select">
+          <select name="state" id="input-state" required>
+            <option>Selecione seu estado</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Tipo da residencia -->
+      <div class="field" required>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="question">
+            Casa
+          </label>
+          <label class="radio">
+            <input type="radio" name="question">
+            Apartamento
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+    
+    <fieldset>
+
+      <!-- Resumo curriculo -->
+      <div class="field">
+        <label class="label">Resumo do currículo</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Escreva aqui" maxlength="1000" required></textarea>
+        </div>
+      </div>
+
+      <!-- Cargo -->
+      <div class="field">
+        <label class="label">Cargo</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Digite seu cargo">
+        </div>
+      </div>
+
+      <!-- Descrição do cargo -->
+      <div class="field">
+        <label class="label">Descrição do cargo</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Escreva aqui" maxlength="500" required></textarea>
+        </div>
+      </div>
+      
+      <!-- Data de inicio -->
+      <div class="field">
+        <label class="label" id="data">Data de inicio</label>
+        <div class="control">
+          <input class="input" type="date" id="data" required>
+        </div>
+      </div>
+
+      <!-- Botões -->
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Enviar</button>
+        </div>
+        <div class="control">
+          <button type="reset" class="button is-link is-light">Limpar</button>
+        </div>
+      </div>
+
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
