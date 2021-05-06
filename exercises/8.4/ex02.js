@@ -63,11 +63,11 @@ const books = [
   },
 ];
 
-const nameReduce = (acumullator, book, index, array) => {
+const nameReduce = (accumulator, book, index, array) => {
   if (index !== array.length - 1) {
-    return `${acumullator} ${book.author.name},`;
+    return `${accumulator} ${book.author.name},`;
   }
-  return `${acumullator} ${book.author.name}.`;
+  return `${accumulator} ${book.author.name}.`;
 };
 
 function allNames() {
